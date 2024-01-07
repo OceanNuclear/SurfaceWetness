@@ -9,31 +9,36 @@ if ARCHIVE:
     from query_historical import parg, get_response, print_response_diagnostics
 else:
     from query_api import parg, get_response, print_response_diagnostics
+LONG_LIST = False
 
 if __name__=="__main__":
     cl_arg = parg.parse_args()
     if ARCHIVE:
         hourly = [
-            "rain",
             "precipitation", #
             "et0_fao_evapotranspiration", #
-            "vapour_pressure_deficit",
-            "wind_speed_10m",
-            "wind_speed_100m",
-            "temperature_2m",
-            "relative_humidity_2m",
-            "dew_point_2m",
-            "sunshine_duration",
-            "shortwave_radiation",
-            "direct_radiation",
-            "diffuse_radiation"
         ],
     else:
         hourly = [
-            "rain",
             "precipitation", #
             "evapotranspiration", #
             "et0_fao_evapotranspiration",
+        ]
+    if LONG_LIST:
+        hourly += [
+            "vapour_pressure_deficit",
+            "rain",
+            "snowfall",
+            "snow_depth",
+            "temperature_2m",
+            "relative_humidity_2m",
+            "wind_speed_10m",
+            "sunshine_duration",
+            "shortwave_radiation",
+            "direct_radiation",
+            "diffuse_radiation",
+            "direct_normal_irradiance",
+            "terrestrial_radiation",
         ]
 
 # Process first location. Add a for-loop for multiple locations or weather models
