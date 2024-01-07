@@ -12,25 +12,29 @@ else:
 
 if __name__=="__main__":
     cl_arg = parg.parse_args()
-    # The order of variables in hourly or daily is the same as the returned order.
     if ARCHIVE:
-        hourly_var_name = [
-            "soil_moisture_0_to_7cm",
-            "soil_moisture_7_to_28cm",
-            "soil_moisture_28_to_100cm",
-            "soil_moisture_100_to_255cm",
-        ]
-        daily_var_name: []
-
+        hourly = [
+            "rain",
+            "precipitation", #
+            "et0_fao_evapotranspiration", #
+            "vapour_pressure_deficit",
+            "wind_speed_10m",
+            "wind_speed_100m",
+            "temperature_2m",
+            "relative_humidity_2m",
+            "dew_point_2m",
+            "sunshine_duration",
+            "shortwave_radiation",
+            "direct_radiation",
+            "diffuse_radiation"
+        ],
     else:
-        hourly_var_name = [
-            "soil_moisture_0_to_1cm",
-            "soil_moisture_1_to_3cm",
-            "soil_moisture_3_to_9cm",
-            "soil_moisture_9_to_27cm",
-            "soil_moisture_27_to_81cm",
+        hourly = [
+            "rain",
+            "precipitation", #
+            "evapotranspiration", #
+            "et0_fao_evapotranspiration",
         ]
-        daily_var_name: []
 
 # Process first location. Add a for-loop for multiple locations or weather models
 response = get_response(cl_arg, {"hourly":hourly_var_name, "daily":daily_var_name})

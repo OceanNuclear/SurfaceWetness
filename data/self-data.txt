@@ -34,11 +34,12 @@
 #       3: wet (            heavily splashing, significant drag due to splashing)
 
 # date, surface type, grading, [location=Didcot]
-2024-01-06 23:00:00, gravel,2.5
+
 2024-01-06 23:00:00, coarse,0.5
 2024-01-06 23:00:00, fine,  0.0
 2024-01-06 23:00:00, paving,1.0,    Oxford
 
+2024-01-06 19:00:00, gravel,2.5
 2024-01-06 19:00:00, coarse,0.5
 2024-01-06 19:00:00, fine,  0.0
 
