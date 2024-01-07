@@ -1,0 +1,51 @@
+# The options are: paving, fine, coarse, gravel
+# "paving" includes more delicate roads including concrete driveways and
+#   paved sidewalks paved in paving-slab patterns, or are made out of bricks.
+#   It is not uncommon to have mud and vegetation accumulated in the larger gaps in these patterns.
+# "fine" refers to asphalt created from fine-graded mix.
+# "dense" refers to asphalt created from coarse-graded mix,
+#   and therefore appears more water-permeable on the surface.
+# "gravel" refers to gravel road such as bridleway /private residence access road that is unpaved.
+#   concrete/brick paving grading:
+#       0: dry. May be sandy but the sand is dry too.
+#       1: darkened but dry enough to roll over without leaving a print on the wheel.
+#       2: darkened and vegetations/mud covering it are wet. May be covered with standing water.
+#       3: visible water gleaming, possibly muddy. Runoff possible.
+#   asphalt (fine) grading:
+#       0: original colour & dry.
+#       1: darkened, potholes filled with 0% water.
+#       2: darkened, potholes filled with 100% water. Water on top is at a standstill.
+#       3: darkened, potholes filled with 100% water. Water on top is 100% moving (runoff).
+#   asphalt (coarse) grading:
+#       0: original colour & dry,
+#       1: darkened, potholes filled with 0% water.
+#       2: darkened, potholes filled with 100% water. Water on top is at a standstill.
+#       3: darkened, potholes filled with 100% water. Water on top is 100% moving (runoff).
+#   gravel road grading:
+#       0: gravel is dry, sandy.
+#       1: sand is soggy and sticks to wheels lightly. Gravel is dry.
+#       2: sand is soggy and sticks to wheels heavily. Gravel is soggy too.
+#           Standing water in puddles at places.
+#       3: muddy with mounts of mud piling up at places.
+# These four grades roughly translates to:
+#       0: dry
+#       1: wet (no print)
+#       2: wet (leaves print, minimal splashing, small drag due to splashing)
+#       3: wet (            heavily splashing, significant drag due to splashing)
+
+# date, surface type, grading, [location=Didcot]
+2024-01-06 23:00:00, gravel,2.5
+2024-01-06 23:00:00, coarse,0.5
+2024-01-06 23:00:00, fine,  0.0
+2024-01-06 23:00:00, paving,1.0,    Oxford
+
+2024-01-06 19:00:00, coarse,0.5
+2024-01-06 19:00:00, fine,  0.0
+
+2024-01-06 16:00:00, coarse,0.0
+2024-01-06 16:00:00, fine,  0.0
+2024-01-06 16:00:00, paving,1.25
+
+2024-01-06 15:00:00, coarse,0.0
+2024-01-06 15:00:00, fine,  0.0
+2024-01-06 15:00:00, paving,1.25
